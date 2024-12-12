@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+}
+#navBar{
+    display: flex;
+    justify-content: space-between;
+}
+#navbar>input{
+    width: 60vw;
+}

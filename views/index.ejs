@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styleSheets/style2.css">
+
+</head>
+<body>
+<div id="floatHome">
+    <!-- SEARCH BAR -->
+<div id="firstPart">
+    <div id="logoContainer">
+        <section id="logo">
+            <a href="/"><h1>Weather<br>App</h1></a>
+        </section>
+    <section id="searchBar">
+        <div>
+            <form action="/search" method="post" id="search" name="search">
+                <input type="text" placeholder="Search Location" name="search">
+            </form>
+        </div>
+    </section>
+</div>
+    <!-- HERO SECTION -->
+
+
+    <section>
+        <div id="main">
+        <div >
+            <h2><%=city%>, <%=country%></h2>
+            <p><%=expectations%> </p>
+            <h1><%=temp%>°C</h1>
+        </div>
+        <div style="height: 200px;">
+            
+             <img src="https://openweathermap.org/img/wn/<%=icon%>@4x.png" height="150px">
+        </div>
+    </div>
+    </section>
+
+    <!-- MORE DETAILS -->
+
+
+    <section id="details">
+        <div id="grid-container" style="box-shadow: 0px 0px 100px -10px <%= color %>;">
+            <div class="grid-items">
+                <!-- icon -->
+                <p>Real Feel</p>
+                <h1><%=realTemp%>°C</h1>
+            </div>
+
+
+            <div class="grid-items">
+                <!-- icon -->
+                <p>Wind</p>
+                <h1><%=wind%> m/s</h1>
+            </div>
+
+
+            <div class="grid-items">
+                <!-- icon -->
+                <p>Weather Description</p>
+                <h1><%=description%></h1>
+            </div>
+
+
+            <div class="grid-items">
+                <!-- icon -->
+                <p>Humidity</p>
+                <h1><%=humidity%>%</h1>
+            </div>
+
+
+        </div>
+    </section>
+</div>
+    <!--  -->
+<div id="secondPart" style="box-shadow: 0px 0px 100px -10px <%= color %>;">
+<div>
+<p class="tag">Pressure</p>
+</div>
+
+<div>
+<p><%=pressure%></p>
+</div>
+
+<div>
+<p class="tag">Sunrise</p>
+</div>
+
+<div>
+<p><%=sunrise%></p>
+</div>
+
+<div>
+<p class="tag">Sunset</p>
+</div>
+
+<div>
+    <p><%=sunset%></p>
+</div>
+    
+<div>
+    <p class="tag">Min Temp</p>
+</div>
+
+<div>
+    <p><%=minTemp%>°C</p>
+</div>
+    
+<div>
+    <p class="tag">Max Temp</p>
+</div>
+
+
+<div>
+    <p><%=maxTemp%>°C</p>
+</div>
+
+</div>
+    <!-- <section></section> -->
+    <script src="/js/geolocation.js"></script>
+</body>
+</html>
